@@ -45,7 +45,7 @@ const Title = () => {
             <h2 className="mb-3 text-lg font-semibold">Connect with Local Installers</h2>
           </div>
           <p className="text-center">We partner with solar installers nationwide and can
-            connect you with the right one when you're ready. 
+            connect you with the right one when you are ready. 
             We get a referral fee if you end up working with our
             partners.
           </p>
