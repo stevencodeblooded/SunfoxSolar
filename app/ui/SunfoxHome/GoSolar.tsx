@@ -5,15 +5,21 @@ import { MdKeyboardArrowUp, MdKeyboardArrowDown } from "react-icons/md"
 import Image from "next/image";
 
 const GoSolar = () => {
-  const [showDetails, setShowDetails] = useState(false);
+  const [showDetails1, setShowDetails1] = useState(true);
+  const [showDetails2, setShowDetails2] = useState(false);
+  const [showDetails3, setShowDetails3] = useState(false);
+  const [showDetails4, setShowDetails4] = useState(false);
   
   return (
-    <div className="px-4 py-8 bg-red-100">
-      <section className="text-center">
-        <h1 className="mb-5 text-3xl font-semibold text-center">Ready To Go Solar?</h1>
+    <div className="px-4 py-8 bg-red-100 lg:flex gap-6 lg:w-full lg:px-6 ">
+      <section className="text-center lg:text-left lg:w-1/2">
+        <h1 className="mb-5 text-3xl font-semibold">Ready To Go Solar?</h1>
         <p className="font-semibold mb-6">When you decide you re ready, we can connect you with local solar installers</p>
+        <section className="w-full">
+          <Image src={'/man-worker-firld-by-solar-panels.jpg'} alt="Man Beside Solar Panel" className="w-full rounded-md h-96"  width={500} height={300}/>
+        </section>
       </section>
-      <div className="flex flex-col gap-6">
+      <div className="flex flex-col gap-6 lg:w-1/2">
         <section className="bg-white p-3 rounded-lg">
           <div className="flex justify-between">
             <div className="flex items-center gap-4 ">
@@ -22,11 +28,11 @@ const GoSolar = () => {
               </div>
               <h3 className=" text-lg font-semibold">Get Real Quotes</h3>
             </div>
-            <div className="text-3xl cursor-pointer" onClick={() => setShowDetails(!showDetails)}>
-              {showDetails ?  <MdKeyboardArrowUp /> : <MdKeyboardArrowDown /> }
+            <div className="text-3xl cursor-pointer" onClick={() => setShowDetails1(!showDetails1)}>
+              {showDetails1 ?  <MdKeyboardArrowUp /> : <MdKeyboardArrowDown /> }
             </div>
           </div>
-          { showDetails && (
+          { showDetails1 && (
             <p className="mt-3">Our financial models are just estimates
             based on preliminary information. If you
             decide to go solar, we ll connect you with
@@ -44,11 +50,11 @@ const GoSolar = () => {
               </div>
               <h3 className=" text-lg font-semibold">Learn About Available Incentives</h3>
             </div>
-            <div className="text-3xl cursor-pointer" onClick={() => setShowDetails(!showDetails)}>
-              {showDetails ?  <MdKeyboardArrowUp /> : <MdKeyboardArrowDown /> }
+            <div className="text-3xl cursor-pointer" onClick={() => setShowDetails2(!showDetails2)}>
+              {showDetails2 ?  <MdKeyboardArrowUp /> : <MdKeyboardArrowDown /> }
             </div>
           </div>
-          { showDetails && (
+          { showDetails2 && (
             <p className="mt-3">Our financial models are just estimates
             based on preliminary information. If you
             decide to go solar, we ll connect you with
@@ -66,11 +72,11 @@ const GoSolar = () => {
               </div>
               <h3 className=" text-lg font-semibold">Compare Offers</h3>
             </div>
-            <div className="text-3xl cursor-pointer" onClick={() => setShowDetails(!showDetails)}>
-              {showDetails ?  <MdKeyboardArrowUp /> : <MdKeyboardArrowDown /> }
+            <div className="text-3xl cursor-pointer" onClick={() => setShowDetails3(!showDetails3)}>
+              {showDetails3 ?  <MdKeyboardArrowUp /> : <MdKeyboardArrowDown /> }
             </div>
           </div>
-          { showDetails && (
+          { showDetails3 && (
             <p className="mt-3">Our financial models are just estimates
             based on preliminary information. If you
             decide to go solar, we ll connect you with
@@ -88,11 +94,11 @@ const GoSolar = () => {
               </div>
               <h3 className=" text-lg font-semibold">Referral Fee</h3>
             </div>
-            <div className="text-3xl cursor-pointer" onClick={() => setShowDetails(!showDetails)}>
-              {showDetails ?  <MdKeyboardArrowUp /> : <MdKeyboardArrowDown /> }
+            <div className="text-3xl cursor-pointer" onClick={() => setShowDetails4(!showDetails4)}>
+              {showDetails4 ?  <MdKeyboardArrowUp /> : <MdKeyboardArrowDown /> }
             </div>
           </div>
-          { showDetails && (
+          { showDetails4 && (
             <p className="mt-3">Our financial models are just estimates
             based on preliminary information. If you
             decide to go solar, we ll connect you with
@@ -102,7 +108,7 @@ const GoSolar = () => {
           )
           }
         </section>
-        <section className="w-full">
+        <section className="w-full lg:hidden">
           <Image src={'/man-worker-firld-by-solar-panels.jpg'} alt="Man Beside Solar Panel" className="w-full rounded-md"  width={500} height={300}/>
         </section>
       </div>
